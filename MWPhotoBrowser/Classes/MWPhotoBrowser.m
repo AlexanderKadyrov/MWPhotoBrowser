@@ -1390,6 +1390,9 @@
 - (void)hideControlsAfterDelay {
 	if (![self areControlsHidden]) {
         [self cancelControlHiding];
+        if (self.navigationController.visibleViewController != self) {
+            return;
+        }
 		_controlVisibilityTimer = [NSTimer scheduledTimerWithTimeInterval:self.delayToHideElements target:self selector:@selector(hideControls) userInfo:nil repeats:NO];
 	}
 }

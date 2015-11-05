@@ -435,11 +435,11 @@
     
     // Navigation bar appearance
     if (!_viewIsActive && [self.navigationController.viewControllers objectAtIndex:0] != self) {
-        //[self storePreviousNavBarAppearance];
+        [self storePreviousNavBarAppearance];
     }
     
-    //[self setNavBarAppearance:animated];
-    [self setNavigationBar];
+    [self setNavBarAppearance:animated];
+    //[self setNavigationBar];
     
     // Update UI
     [self hideControlsAfterDelay];
@@ -464,7 +464,7 @@
         _viewIsActive = NO;
         
         // Bar state / appearance
-        //[self restorePreviousNavBarAppearance:animated];
+        [self restorePreviousNavBarAppearance:animated];
         
     }
     

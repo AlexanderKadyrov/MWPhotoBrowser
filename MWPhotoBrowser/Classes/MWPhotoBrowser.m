@@ -221,17 +221,6 @@
     }
 }
 
-- (void)addAccessibilityWithType:(UIAccessibilityTraits)accType
-                           label:(NSString *)accLabel
-                         andHint:(NSString *)accHint
-{
-    self.isAccessibilityElement = YES;
-    self.accessibilityTraits = accType;
-    self.accessibilityLabel = NSLocalizedString(accLabel, nil);
-    self.accessibilityHint = NSLocalizedString(accHint, nil);
-    
-}
-
 
 - (void)setButtonBack {
     UIButton *button = [[UIButton alloc] init];

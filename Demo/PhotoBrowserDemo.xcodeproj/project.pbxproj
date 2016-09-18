@@ -244,7 +244,7 @@
 				LastUpgradeCheck = 0600;
 				TargetAttributes = {
 					4C6F978C14AF734800F8389A = {
-						DevelopmentTeam = VK94X636H2;
+						DevelopmentTeam = 7T7W7Y6J7K;
 					};
 				};
 			};
@@ -418,10 +418,12 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoBrowserDemo/PhotoBrowserDemo-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "PhotoBrowserDemo/PhotoBrowserDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -439,10 +441,12 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoBrowserDemo/PhotoBrowserDemo-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "PhotoBrowserDemo/PhotoBrowserDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",

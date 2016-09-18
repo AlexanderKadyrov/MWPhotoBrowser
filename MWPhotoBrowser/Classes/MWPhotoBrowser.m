@@ -11,6 +11,7 @@
 #import "MWPhotoBrowser.h"
 #import "MWPhotoBrowserPrivate.h"
 #import "SDImageCache.h"
+#import "UIView+AccessibilityHelper.h"
 
 #define PADDING                  10
 #define ACTION_SHEET_OLD_ACTIONS 2000
@@ -220,12 +221,25 @@
     }
 }
 
+- (void)addAccessibilityWithType:(UIAccessibilityTraits)accType
+                           label:(NSString *)accLabel
+                         andHint:(NSString *)accHint
+{
+    self.isAccessibilityElement = YES;
+    self.accessibilityTraits = accType;
+    self.accessibilityLabel = NSLocalizedString(accLabel, nil);
+    self.accessibilityHint = NSLocalizedString(accHint, nil);
+    
+}
+
+
 - (void)setButtonBack {
     UIButton *button = [[UIButton alloc] init];
     
     [button setTitle:@"" forState:UIControlStateNormal];
     [button setImage:[UIImage imageNamed:@"button_back"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(actionBack) forControlEvents:UIControlEventTouchUpInside];
+    [button addAccessibilityWithType:UIAccessibilityTraitButton label:@"Назад" andHint:@"Идти назад"];
     
     if (SYSTEM_VERSION_LESS_THAN(@"7")) {
         [button setContentEdgeInsets:UIEdgeInsetsMake(0, 10, 0, 10)];
@@ -245,6 +259,7 @@
     [button setImage:[UIImage imageNamed:@"icon_share-selected"] forState:UIControlStateSelected];
     [button setImage:[UIImage imageNamed:@"icon_share-selected"] forState:UIControlStateHighlighted];
     [button addTarget:self action:@selector(actionButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [button addAccessibilityWithType:UIAccessibilityTraitButton label:@"Поделиться" andHint:@"Поделиться картинкой"];
     
     _actionButton = [[UIBarButtonItem alloc] initWithCustomView:button];
     
